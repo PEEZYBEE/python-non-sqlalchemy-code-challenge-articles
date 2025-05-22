@@ -32,12 +32,12 @@ class TestAuthor:
         # assert author_1.name == "Carry Bradshaw"
 
         # comment out the next two lines if using Exceptions
-        # author_2.name = 2
-        # assert author_2.name == "Nathaniel Hawthorne"
+        author_2.name = 2
+        assert author_2.name == "Nathaniel Hawthorne"
 
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-               Author(2)
+              with pytest.raises(Exception):
+             Author(2)
 
     def test_name_len(self):
         """author name is longer than 0 characters"""

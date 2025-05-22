@@ -10,10 +10,6 @@ class Author:
     def name(self):
         return self._name
 
-    @name.setter
-    def name(self, value):
-        raise AttributeError("name is read-only")
-
     def articles(self):
         return self._articles
 
@@ -80,8 +76,6 @@ class Magazine:
 
 
 class Article:
-    all = []
-
     def __init__(self, author, magazine, title):
         if not isinstance(author, Author):
             raise ValueError("Author must be of type Author")
@@ -97,7 +91,6 @@ class Article:
         # Register article
         author._articles.append(self)
         magazine._articles.append(self)
-        Article.all.append(self)
 
     @property
     def author(self):
@@ -124,7 +117,3 @@ class Article:
     @property
     def title(self):
         return self._title
-
-    @title.setter
-    def title(self, value):
-        raise AttributeError("title is read-only")

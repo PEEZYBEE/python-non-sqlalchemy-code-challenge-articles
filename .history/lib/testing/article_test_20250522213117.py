@@ -47,7 +47,7 @@ class TestArticle:
              Article(author, magazine, "Test")
 
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
+         with pytest.raises(Exception):
              Article(author, magazine, "How to wear a tutu with style and walk confidently down the street")
 
     def test_has_an_author(self):
